@@ -109,13 +109,13 @@ const FreelancerDashboard = () => {
 
         <div className="bg-white p-6 rounded-lg shadow-md">
           <h2 className="text-xl font-semibold text-gray-700 mb-4 flex items-center">
-            <FaClock className="mr-2 text-yellow-500" />
+            <FaCheckCircle className="mr-2 text-green-500" />
             completed Project 
           </h2>
           {completedProjects.length > 0 ? (
             <ul className="space-y-3">
               {completedProjects.map(project => (
-                <li key={project._id} className="border-l-4 border-yellow-500 pl-4 py-2 bg-gray-50 rounded">
+                <li key={project._id} className="border-l-4 border-green-500 pl-4 py-2 bg-gray-50 rounded">
                   <p className="font-medium text-gray-900">{project.title || project.project_details}</p>
                   <p className="text-sm text-gray-500">Client: {project.client_id?.company_name || 'N/A'}</p>
                   <span className={`text-xs font-semibold px-2 py-1 rounded-full ${getStatusClass(project.status)}`}>
